@@ -5,6 +5,6 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RAM"
         mc:Ignorable="d"
-        Title="MainWindow" Height="875.402" Width="1438.103">
-    <local:RamUserControl HorizontalAlignment="Left" Height="679" Margin="10,10,0,0" VerticalAlignment="Top" Width="1369"/>
+        Title="MainWindow" Height="689.402" Width="933.103">
+    <local:RamUserControl HorizontalAlignment="Left" Height="679" Margin="0,0,0,-19" VerticalAlignment="Top" Width="937" Loaded="RamUserControl_Loaded"/>
 </Window>

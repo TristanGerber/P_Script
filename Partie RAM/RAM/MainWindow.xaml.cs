@@ -24,5 +24,10 @@ namespace RAM
         {
             InitializeComponent();
         }
+
+        private void RamUserControl_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

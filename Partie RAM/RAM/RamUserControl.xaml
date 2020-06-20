@@ -8,22 +8,24 @@
              d:DesignHeight="633" d:DesignWidth="909">
     <Grid Background="#FF8FD9FF">
         <Label Content="Informations sur la RAM" HorizontalAlignment="Left" Margin="28,23,0,0" VerticalAlignment="Top" Foreground="#FF062463" FontSize="24"/>
-        <Label Content="Espace Libre   :&#xD;&#xA;" HorizontalAlignment="Left" Margin="28,146,0,0" VerticalAlignment="Top" Foreground="#FF062463" FontSize="18" Height="34"/>
-        <Label Content="Espace Utilisé :&#xD;&#xA;" HorizontalAlignment="Left" Margin="28,182,0,0" VerticalAlignment="Top" Foreground="#FF062463" FontSize="18" Height="34"/>
-        <Label Content="Espace Total   :&#xA;" HorizontalAlignment="Left" Margin="28,109,0,0" VerticalAlignment="Top" Foreground="#FF062463" FontSize="18" Height="34"/>
-        <Label x:Name="_1" Content="null" HorizontalAlignment="Left" Margin="168,109,0,0" VerticalAlignment="Top" Foreground="#FF062463" FontSize="18" Height="34"/>
-        <Label x:Name="_2" Content="null" HorizontalAlignment="Left" Margin="168,146,0,0" VerticalAlignment="Top" Foreground="#FF062463" FontSize="18" Height="34"/>
-        <Label x:Name="_3" Content="null" HorizontalAlignment="Left" Margin="168,182,0,0" VerticalAlignment="Top" Foreground="#FF062463" FontSize="18" Height="34"/>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="107" Margin="28,109,0,0" VerticalAlignment="Top" Width="247"/>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="164" Margin="28,244,0,0" VerticalAlignment="Top" Width="247"/>
-        <Label Content="Slots Utilisés :&#xA;" HorizontalAlignment="Left" Margin="40,251,0,0" VerticalAlignment="Top" Foreground="#FF062463" FontSize="18" Height="34"/>
-        <Label x:Name="_4" Content="null" HorizontalAlignment="Left" Margin="168,251,0,0" VerticalAlignment="Top" Foreground="#FF062463" FontSize="18" Height="34"/>
-        <Label Content="Fréquence    :&#xA;" HorizontalAlignment="Left" Margin="40,290,0,0" VerticalAlignment="Top" Foreground="#FF062463" FontSize="18" Height="34"/>
-        <Label x:Name="_5" Content="null" HorizontalAlignment="Left" Margin="168,290,0,0" VerticalAlignment="Top" Foreground="#FF062463" FontSize="18" Height="34"/>
-        <Label Content="CAS              :" HorizontalAlignment="Left" Margin="40,329,0,0" VerticalAlignment="Top" Foreground="#FF062463" FontSize="18" Height="34"/>
-        <Label x:Name="_6" Content="null" HorizontalAlignment="Left" Margin="168,329,0,0" VerticalAlignment="Top" Foreground="#FF062463" FontSize="18" Height="34"/>
-        <Label Content="Marque        :" HorizontalAlignment="Left" Margin="40,368,0,0" VerticalAlignment="Top" Foreground="#FF062463" FontSize="18" Height="34"/>
-        <Label x:Name="_7" Content="null" HorizontalAlignment="Left" Margin="168,368,0,0" VerticalAlignment="Top" Foreground="#FF062463" FontSize="18" Height="34"/>
-        <local:GraphsViewer x:Name="Graph" HorizontalAlignment="Left" Height="497" VerticalAlignment="Top" Width="560" Margin="320,109,0,0" GLenght="100" SizeModeX="Zoom" TileColor="Black" LineSize="1"/>
+        <Label Content="Espace Libre   :&#xD;&#xA;" HorizontalAlignment="Left" Margin="28,194,0,0" VerticalAlignment="Top" Foreground="#FF062463" FontSize="18" Height="34"/>
+        <Label Content="Espace Utilisé :&#xD;&#xA;" HorizontalAlignment="Left" Margin="28,230,0,0" VerticalAlignment="Top" Foreground="#FF062463" FontSize="18" Height="34"/>
+        <Label Content="Espace Total   :&#xA;" HorizontalAlignment="Left" Margin="28,157,0,0" VerticalAlignment="Top" Foreground="#FF062463" FontSize="18" Height="34"/>
+        <Label x:Name="_1" Content="null" HorizontalAlignment="Left" Margin="168,157,0,0" VerticalAlignment="Top" Foreground="#FF062463" FontSize="18" Height="34"/>
+        <Label x:Name="_2" Content="null" HorizontalAlignment="Left" Margin="168,194,0,0" VerticalAlignment="Top" Foreground="#FF062463" FontSize="18" Height="34"/>
+        <Label x:Name="_3" Content="null" HorizontalAlignment="Left" Margin="168,230,0,0" VerticalAlignment="Top" Foreground="#FF062463" FontSize="18" Height="34"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="155" Margin="28,113,0,0" VerticalAlignment="Top" Width="247"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="164" Margin="28,290,0,0" VerticalAlignment="Top" Width="247"/>
+        <Label Content="Slots Utilisés :&#xA;" HorizontalAlignment="Left" Margin="40,297,0,0" VerticalAlignment="Top" Foreground="#FF062463" FontSize="18" Height="34"/>
+        <Label x:Name="_4" Content="null" HorizontalAlignment="Left" Margin="168,297,0,0" VerticalAlignment="Top" Foreground="#FF062463" FontSize="18" Height="34"/>
+        <Label Content="Fréquence    :&#xA;" HorizontalAlignment="Left" Margin="40,336,0,0" VerticalAlignment="Top" Foreground="#FF062463" FontSize="18" Height="34"/>
+        <Label x:Name="_5" Content="null" HorizontalAlignment="Left" Margin="168,336,0,0" VerticalAlignment="Top" Foreground="#FF062463" FontSize="18" Height="34"/>
+        <Label Content="CAS              :" HorizontalAlignment="Left" Margin="40,375,0,0" VerticalAlignment="Top" Foreground="#FF062463" FontSize="18" Height="34"/>
+        <Label x:Name="_6" Content="null" HorizontalAlignment="Left" Margin="168,375,0,0" VerticalAlignment="Top" Foreground="#FF062463" FontSize="18" Height="34"/>
+        <Label Content="Marque        :" HorizontalAlignment="Left" Margin="40,414,0,0" VerticalAlignment="Top" Foreground="#FF062463" FontSize="18" Height="34"/>
+        <Label x:Name="_7" Content="null" HorizontalAlignment="Left" Margin="168,414,0,0" VerticalAlignment="Top" Foreground="#FF062463" FontSize="18" Height="34"/>
+        <local:GraphsViewer x:Name="Graph" HorizontalAlignment="Left" Height="497" VerticalAlignment="Top" Width="560" Margin="320,109,0,0" GLenght="100" SizeModeX="Fixed" TileColor="Black" LineSize="1" SizeModeY="Fixed"/>
+        <Label Content="Pourcentage  :" HorizontalAlignment="Left" Margin="29,123,0,0" VerticalAlignment="Top" Foreground="#FF062463" FontSize="18" Height="34"/>
+        <Label x:Name="lblPercentil" Content="null" HorizontalAlignment="Left" Margin="168,123,0,0" VerticalAlignment="Top" Foreground="#FF062463" FontSize="18" Height="34"/>
     </Grid>
 </UserControl>

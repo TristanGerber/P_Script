@@ -18,6 +18,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace RAM
 {
@@ -26,8 +27,11 @@ namespace RAM
     /// </summary>
     public partial class RamUserControl : UserControl
     {
-        private object RAMUsage = 0;
+        private double RAMFree = 0;
         private int RAMUSageValueCount = 0;
+        private byte scaleSize = 10;
+        private byte maxValue = 9;
+
         public RamUserControl()
         {
             InitializeComponent();
@@ -48,12 +52,28 @@ namespace RAM
         {
             PowerShell script = PowerShell.Create();
             script.AddScript(@"$os = Get-Ciminstance Win32_OperatingSystem;
-                               $pctFree = 100 - [math]::Round(($os.FreePhysicalMemory/$os.TotalVisibleMemorySize)*100,2);
-                               return $pctFree -as [int]");
+                               $pctFree = [math]::Round(($os.FreePhysicalMemory/$os.TotalVisibleMemorySize)*100,4);
+                               return $pctFree -as [double]");
             Collection<PSObject> results = script.Invoke();
 
-            Graph.Points.Add(new Point(RAMUSageValueCount * 10, Convert.ToInt32(results[0].BaseObject)));
-            RAMUSageValueCount++;
+            RAMFree = Convert.ToDouble(results[0].BaseObject);
+
+            if (RAMUSageValueCount <= maxValue)
+            {
+                Graph.Points.Add(new Point(RAMUSageValueCount * scaleSize, RAMFree));
+                RAMUSageValueCount++;
+            }
+            else
+            {
+                for (int i = 0; i < maxValue; i++)
+                    Graph.Points[i] = new Point(i * scaleSize, Graph.Points[i + 1].Y);
+
+                Graph.Points.RemoveAt(maxValue);
+                Graph.Points.Add(new Point(maxValue * scaleSize, RAMFree));
+            }
+
+            this.lblPercentil.Dispatcher.Invoke(DispatcherPriority.Normal,
+                new Action(() => { lblPercentil.Content = (100 - RAMFree).ToString().Substring(0,4) + "%"; }));
         }
 
         private void RamUsageUpdaterElapsed(object o, ElapsedEventArgs e)

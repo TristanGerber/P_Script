@@ -169,7 +169,7 @@ namespace RAM
             Update();
         }
 
-        public void Draw()
+        private void Draw()
         {
             if (g != null)
             {
